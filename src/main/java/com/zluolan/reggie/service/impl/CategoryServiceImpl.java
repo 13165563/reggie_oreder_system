@@ -35,13 +35,13 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
         // 添加查询条件
         dishQueryWrapper.eq(Dish::getCategoryId, id);
         int count1 = dishService.count(dishQueryWrapper);
-        //TODO 1. 判断当前分类是否关联了菜品，如果已经关联，抛出一个业务异常
+//     1. 判断当前分类是否关联了菜品，如果已经关联，抛出一个业务异常
         if (count1 > 0) {
             // 如果已经关联，抛出一个业务异常
             throw new CustomException("当前分类下关联了菜品，不能删除");
         }
 
-        //TODO 2. 判断当前分类是否关联了套餐，如果已经关联，抛出一个业务异常
+        // 2. 判断当前分类是否关联了套餐，如果已经关联，抛出一个业务异常
         LambdaQueryWrapper<Setmeal> setmealQueryWrapper = new LambdaQueryWrapper<>();
         setmealQueryWrapper.eq(Setmeal::getCategoryId, id);
         int count2 = setmealService.count(setmealQueryWrapper);
@@ -49,7 +49,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
             // 如果已经关联，抛出一个业务异常
             throw new CustomException("当前分类下关联了套餐，不能删除");
         }
-        //TODO 3. 正常删除分类
+        // 3. 正常删除分类
         super.removeById(id);
 
     }

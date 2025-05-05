@@ -30,14 +30,17 @@ public class Employee implements Serializable {
 
     private Integer status;
 
+    // TableField注解里面的fill属性是用来指定字段的填充方式，默认为空，即不填充
+    @TableField(fill = FieldFill.INSERT) // 插入时自动填充
     private LocalDateTime createTime;
 
+    @TableField(fill = FieldFill.INSERT_UPDATE) // 插入和更新时自动填充
     private LocalDateTime updateTime;
 
-    @TableField(fill = FieldFill.INSERT)
+    @TableField(fill = FieldFill.INSERT) // 插入时自动填充
     private Long createUser;
 
-    @TableField(fill = FieldFill.INSERT_UPDATE)
+    @TableField(fill = FieldFill.INSERT_UPDATE) // 插入和更新时自动填充
     private Long updateUser;
 
 }

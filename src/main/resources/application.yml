@@ -1,6 +1,6 @@
 ---
 server:
-  port: 9001
+  port: 8080
 spring:
   application:
     name: ccTakeOut
@@ -21,3 +21,6 @@ mybatis-plus:
       id-type: ASSIGN_ID
 takeOutFile:
   fileLocaltion: \src\main\resources\pic\
+
+reggie:
+  path: D:\reggie\pictures\

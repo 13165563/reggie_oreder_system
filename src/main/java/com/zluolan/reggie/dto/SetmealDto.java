@@ -1,8 +1,6 @@
 package com.zluolan.reggie.dto;
 
 
-import com.zluolan.reggie.dto.DishDto;
-import com.zluolan.reggie.dto.DishDto;
 import com.zluolan.reggie.entity.Setmeal;
 import com.zluolan.reggie.entity.SetmealDish;
 import lombok.Data;

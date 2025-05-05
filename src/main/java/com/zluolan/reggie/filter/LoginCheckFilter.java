@@ -85,7 +85,6 @@ public class LoginCheckFilter implements Filter {
         // 响应数据为json格式
         response.getWriter().write(JSON.toJSONString(R.error("NOTLOGIN")));
         log.info("拦截，交由前端跳转");
-        return;
 
     }
 

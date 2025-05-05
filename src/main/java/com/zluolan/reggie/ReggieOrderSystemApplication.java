@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.servlet.annotation.WebFilter;
 
 @EnableTransactionManagement //     开启事务管理
 @Slf4j

@@ -7,6 +7,7 @@ import com.zluolan.reggie.service.UserService;
 import com.zluolan.reggie.utiles.ValidateCodeUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.CacheManager;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,6 +35,8 @@ public class UserController {
     private UserService userService;
     @Autowired
     private RedisTemplate redisTemplate;
+    @Autowired
+    private CacheManager cacheManager;
 
     /**
      * 发送短信验证码

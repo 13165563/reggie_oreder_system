@@ -40,7 +40,11 @@ public class LoginCheckFilter implements Filter {
                 "/front/**",
                 "/common/**",
                 "/user/sendMsg", // 新增发送短信的路径
-                "/user/login" // 新增用户登录的路径
+                "/user/login", // 新增用户登录的路径
+                "doc.html",
+                "/webjars/**",
+                "/swagger-resources",
+                "/v2/api-docs"
         };
 
 
